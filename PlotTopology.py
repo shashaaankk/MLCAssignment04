@@ -19,13 +19,13 @@ wifi_ips = [details["WiFi"] for details in ip_dict.values()]
 # Latency matrix (example data provided by remote device)
 # REPLACE HERE!
 latency_matrix = np.array([
-    [0, np.nan, 8.57, 5.95, 0.107, 10.8, 5.16],
-    [np.nan, 0, 8.6, 5.06, 0.096, 10.0, 4.8],
-    [np.nan, np.nan, 0, 9.32, 0.118, 9.48, 5.02],
-    [np.nan, np.nan, 13.0, 0, 0.117, 10.2, 4.79],
-    [np.nan, np.nan, 8.16, 5.62, 0, 5.23, 5.05],
-    [np.nan, np.nan, 8.43, 4.93, 0.106, 0, 7.96],
-    [np.nan, np.nan, 8.26, 5.2, 0.108, 8.04, 0]
+    [0,      np.nan, 8.57, 5.95,  0.107, 10.8, 5.16],
+    [np.nan, 0,      8.6,  5.06,  0.096, 10.0,  4.8],
+    [np.nan, np.nan, 0,    9.32,  0.118, 9.48, 5.02],
+    [np.nan, np.nan, 13.0, 0,     0.117, 10.2, 4.79],
+    [np.nan, np.nan, 8.16, 5.62,  0,     5.23, 5.05],
+    [np.nan, np.nan, 8.43, 4.93,  0.106, 0,    7.96],
+    [np.nan, np.nan, 8.26, 5.2,   0.108, 8.04, 0]
 ])
 
 node_labels = list(ip_dict.keys())

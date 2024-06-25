@@ -1,0 +1,24 @@
+digraph {
+	"mcladhoc-01" [label="mcladhoc-01 
+ 192.168.210.60" fontname=arial fontsize=10 shape=square]
+	"mcladhoc-02" [label="mcladhoc-02 
+ 192.168.210.61" fontname=arial fontsize=10 shape=square]
+	"mcladhoc-03" [label="mcladhoc-03 
+ 192.168.210.62" color=gray fontname=arial fontsize=10 shape=square]
+	"mcladhoc-04" [label="mcladhoc-04 
+ 192.168.210.63" fontname=arial fontsize=10 shape=square]
+	"mcladhoc-05" [label="mcladhoc-05 
+ 192.168.210.64" fontname=arial fontsize=10 shape=square]
+	"mcladhoc-06" [label="mcladhoc-06 
+ 192.168.210.65" fontname=arial fontsize=10 shape=square]
+	"mcladhoc-07" [label="mcladhoc-07 
+ 192.168.210.66" fontname=arial fontsize=10 shape=square]
+	"mcladhoc-07" -> "mcladhoc-06" [label="~7.7ms*" dir=both fontsize=8]
+	"mcladhoc-07" -> "mcladhoc-05" [label="~8.5ms*" dir=both fontsize=8]
+	"mcladhoc-05" -> "mcladhoc-04" [label="~9.5ms*" dir=both fontsize=8]
+	"mcladhoc-06" -> "mcladhoc-05" [label="~9.4ms*" dir=both fontsize=8]
+	"mcladhoc-05" -> "mcladhoc-03" [label="~13.3ms*" fontsize=8]
+	"mcladhoc-01" -> "mcladhoc-03" [label="~16.5ms*" fontsize=8]
+	"mcladhoc-04" -> "mcladhoc-03" [label="~8.0ms*" fontsize=8]
+	"mcladhoc-01" -> "mcladhoc-02" [label="~170ms*" dir=both fontsize=8]
+}

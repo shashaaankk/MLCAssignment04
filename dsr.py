@@ -2,7 +2,7 @@ import socket
 if __name__=="__main__":
 
         sequence_id = 0     # Sequence ID
-        my_IP = 64          # Last byte of WiFi IP of the current node #CHANGE HERE
+        my_IP = 63          # Last byte of WiFi IP of the current node #Change this to IP of node
         data_packet = ""    # Data to be sent
         myRouteDict = {}    # Dictionary stores the arriving routes
 
@@ -38,7 +38,7 @@ if __name__=="__main__":
                                         socket_send.sendto(data+bytearray([my_IP]),(("192.168.210.255",5005))) # Broadcast
                                 elif data[1] != my_IP and data[2] == 1 :   # Route Reply via unicast
                                         print("RREP"+ str(sequence_id))    
-                                        myRouteDict.put(int(addresses[-1]),addresses)
+                                        myRouteDict[int(addresses[-1])] = addresses
                                         socket_send_uni.sendto(data,(("192.168.210."+str(addresses[addresses.index(my_IP)-1]),5005)))
                                 elif data[1] != my_IP and data[2] == 2:    # Data Transfer
                                        print("Data Transfer"+ str(sequence_id))

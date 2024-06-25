@@ -3,10 +3,10 @@ import socket
 
 if __name__=="__main__":
         sequence_id = 0
-        my_IP = 66
+        my_IP = 63 #Change this to IP of node
         # Create the socket
-        socket_send = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        socket_recv = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        socket_send = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) #IPv4, UDP : Sender
+        socket_recv = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) #IPv4, UDP : Receiver
         # Make the socket multicast-aware, and set TTL.
         socket_send.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1) #Broadcasting, Option changed to 1
         # Multicast compatible, Enabling binding to the address and port combination that is in use
